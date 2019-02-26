@@ -30,7 +30,7 @@ public class RabbitMqHandler {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //            // 否认该消息，并重新加入队列
-//            channel.basicNack(message.getMessageProperties().getDeliveryTag(),false,false);
+//            channel.basicNack(message.getMessageProperties().getDeliveryTag(),false,true);
 //        }
         // 消息确认
         channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
